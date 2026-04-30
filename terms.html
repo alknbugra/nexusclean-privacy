@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nexus Clean Master – Terms of Service</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:       #0F172A;
+      --surface:  #1E293B;
+      --border:   rgba(56,189,248,.18);
+      --cyan:     #38BDF8;
+      --text:     #CBD5E1;
+      --muted:    #64748B;
+      --heading:  #F1F5F9;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    #lang-bar {
+      position: sticky;
+      top: 0;
+      z-index: 99;
+      background: rgba(15,23,42,.9);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: flex-end;
+      padding: .6rem 1.5rem;
+      gap: .5rem;
+    }
+    #lang-bar button {
+      background: transparent;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      color: var(--muted);
+      cursor: pointer;
+      font-family: 'Orbitron', sans-serif;
+      font-size: .7rem;
+      letter-spacing: 1px;
+      padding: .35rem .8rem;
+      transition: all .2s;
+    }
+    #lang-bar button.active,
+    #lang-bar button:hover {
+      border-color: var(--cyan);
+      color: var(--cyan);
+    }
+
+    header {
+      text-align: center;
+      padding: 4rem 1.5rem 2.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(56,189,248,.08);
+      border: 1px solid rgba(56,189,248,.25);
+      border-radius: 999px;
+      color: var(--cyan);
+      font-family: 'Orbitron', sans-serif;
+      font-size: .65rem;
+      letter-spacing: 2px;
+      padding: .35rem 1rem;
+      margin-bottom: 1.4rem;
+    }
+    h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: clamp(1.4rem, 4vw, 2rem);
+      font-weight: 900;
+      color: var(--heading);
+      letter-spacing: 3px;
+      margin-bottom: .6rem;
+    }
+    .subtitle {
+      color: var(--cyan);
+      font-family: 'Orbitron', sans-serif;
+      font-size: .7rem;
+      letter-spacing: 2px;
+    }
+    .updated {
+      color: var(--muted);
+      font-size: .85rem;
+      margin-top: .8rem;
+    }
+
+    main {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 5rem;
+    }
+
+    section { margin-bottom: 2.8rem; }
+
+    h2 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: .95rem;
+      font-weight: 700;
+      color: var(--cyan);
+      letter-spacing: 2px;
+      margin-bottom: 1rem;
+      padding-bottom: .5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    p { margin-bottom: .9rem; color: var(--text); }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: .9rem;
+    }
+    ul li {
+      padding: .3rem 0 .3rem 1.2rem;
+      position: relative;
+      color: var(--text);
+    }
+    ul li::before {
+      content: '›';
+      position: absolute;
+      left: 0;
+      color: var(--cyan);
+      font-weight: 700;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.4rem 1.6rem;
+      margin-top: .8rem;
+    }
+    .card strong { color: var(--heading); }
+
+    .warning {
+      background: rgba(251,146,60,.06);
+      border: 1px solid rgba(251,146,60,.25);
+      border-radius: 12px;
+      padding: 1rem 1.4rem;
+      margin-top: .8rem;
+      color: #FED7AA;
+    }
+
+    a { color: var(--cyan); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    [data-lang] { display: none; }
+    [data-lang].visible { display: block; }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem 3rem;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: .85rem;
+    }
+    footer span { color: var(--cyan); }
+  </style>
+</head>
+<body>
+
+<div id="lang-bar">
+  <button class="active" onclick="setLang('en')" id="btn-en">EN</button>
+  <button onclick="setLang('tr')" id="btn-tr">TR</button>
+</div>
+
+<header>
+  <div class="badge">NEXUS CLEAN MASTER</div>
+  <h1>TERMS OF SERVICE</h1>
+  <p class="subtitle">USER AGREEMENT</p>
+  <p class="updated" id="updated-label">Last updated: June 2025</p>
+</header>
+
+<main>
+
+<!-- ═══════════════ ENGLISH ═══════════════ -->
+<div data-lang="en" class="visible">
+
+  <section>
+    <h2>01 · ACCEPTANCE OF TERMS</h2>
+    <p>
+      By downloading, installing, or using Nexus Clean Master ("the app"), you agree to be
+      bound by these Terms of Service ("Terms"). If you do not agree to these Terms, please
+      do not use the app.
+    </p>
+    <p>
+      These Terms apply to the Android application published by Buğra Alkın on Google Play.
+    </p>
+  </section>
+
+  <section>
+    <h2>02 · LICENSE</h2>
+    <p>
+      We grant you a limited, non-exclusive, non-transferable, revocable license to install
+      and use the app on Android devices you own or control, solely for your personal,
+      non-commercial purposes.
+    </p>
+    <p>You may not:</p>
+    <ul>
+      <li>Copy, modify, or distribute the app or its source code</li>
+      <li>Reverse-engineer, decompile, or disassemble the app</li>
+      <li>Rent, lease, or sublicense the app to any third party</li>
+      <li>Remove or alter any proprietary notices or labels</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>03 · DESCRIPTION OF SERVICE</h2>
+    <p>Nexus Clean Master provides the following features:</p>
+    <ul>
+      <li>Scanning and deletion of junk files (APKs, logs, temp files)</li>
+      <li>Storage usage analysis by file category</li>
+      <li>Photo compression to reduce file size</li>
+      <li>Battery status and health monitoring</li>
+      <li>Running process and RAM usage display</li>
+    </ul>
+    <p>
+      All operations are performed locally on your device. The app does not upload files to
+      any server.
+    </p>
+  </section>
+
+  <section>
+    <h2>04 · USER RESPONSIBILITIES</h2>
+    <p>You are solely responsible for:</p>
+    <ul>
+      <li>Reviewing files before deletion; deleted files may not be recoverable</li>
+      <li>Maintaining backups of important data before using cleaning features</li>
+      <li>Granting appropriate permissions required for the app to function</li>
+      <li>Using the app only on devices you own or are authorised to manage</li>
+    </ul>
+    <div class="warning">
+      ⚠ <strong>Important:</strong> File deletion is permanent. Always verify your selection
+      before confirming a delete operation.
+    </div>
+  </section>
+
+  <section>
+    <h2>05 · PROHIBITED USES</h2>
+    <p>You agree not to use the app to:</p>
+    <ul>
+      <li>Delete system-critical files that may impair device functionality</li>
+      <li>Circumvent security or access controls on any device</li>
+      <li>Violate any applicable local, national, or international law</li>
+      <li>Interfere with or disrupt the integrity of the app or its services</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>06 · THIRD-PARTY SERVICES</h2>
+    <p>
+      The app integrates third-party services including Firebase (Google LLC) and Google
+      AdMob. Your use of these services is subject to their respective terms and privacy
+      policies. We are not responsible for the practices of these third parties.
+    </p>
+  </section>
+
+  <section>
+    <h2>07 · DISCLAIMER OF WARRANTIES</h2>
+    <p>
+      The app is provided <strong style="color:#F1F5F9">"as is"</strong> and
+      <strong style="color:#F1F5F9">"as available"</strong> without warranties of any kind,
+      either express or implied, including but not limited to implied warranties of
+      merchantability, fitness for a particular purpose, or non-infringement.
+    </p>
+    <p>
+      We do not warrant that the app will be error-free, uninterrupted, or free of viruses
+      or other harmful components.
+    </p>
+  </section>
+
+  <section>
+    <h2>08 · LIMITATION OF LIABILITY</h2>
+    <p>
+      To the fullest extent permitted by applicable law, Buğra Alkın shall not be liable
+      for any indirect, incidental, special, consequential, or punitive damages arising out
+      of or related to your use of the app, including but not limited to data loss resulting
+      from file deletion operations.
+    </p>
+  </section>
+
+  <section>
+    <h2>09 · CHANGES TO TERMS</h2>
+    <p>
+      We reserve the right to modify these Terms at any time. Updated Terms will be posted
+      at this URL. Your continued use of the app after changes constitutes acceptance of the
+      new Terms.
+    </p>
+  </section>
+
+  <section>
+    <h2>10 · GOVERNING LAW</h2>
+    <p>
+      These Terms are governed by the laws of the Republic of Türkiye, without regard to
+      conflict of law principles.
+    </p>
+  </section>
+
+  <section>
+    <h2>11 · CONTACT</h2>
+    <div class="card">
+      <p><strong>Developer:</strong> Buğra Alkın</p>
+      <p><strong>Email:</strong> <a href="mailto:alknbugra@gmail.com">alknbugra@gmail.com</a></p>
+      <p><strong>App:</strong> Nexus Clean Master</p>
+    </div>
+  </section>
+
+</div><!-- /en -->
+
+<!-- ═══════════════ TURKISH ═══════════════ -->
+<div data-lang="tr">
+
+  <section>
+    <h2>01 · ŞARTLARIN KABULÜ</h2>
+    <p>
+      Nexus Clean Master'ı ("uygulama") indirerek, yükleyerek veya kullanarak bu Kullanım
+      Şartlarını ("Şartlar") kabul etmiş sayılırsınız. Şartları kabul etmiyorsanız lütfen
+      uygulamayı kullanmayın.
+    </p>
+    <p>
+      Bu Şartlar, Buğra Alkın tarafından Google Play'de yayımlanan Android uygulaması için
+      geçerlidir.
+    </p>
+  </section>
+
+  <section>
+    <h2>02 · LİSANS</h2>
+    <p>
+      Size, sahip olduğunuz veya kontrol ettiğiniz Android cihazlarda uygulamayı yalnızca
+      kişisel ve ticari olmayan amaçlarla yükleyip kullanmanız için sınırlı, münhasır
+      olmayan, devredilemez ve geri alınabilir bir lisans veriyoruz.
+    </p>
+    <p>Şunları yapamazsınız:</p>
+    <ul>
+      <li>Uygulamayı veya kaynak kodunu kopyalamak, değiştirmek veya dağıtmak</li>
+      <li>Uygulamayı tersine mühendislik, decompile veya disassemble yöntemiyle çözümlemek</li>
+      <li>Uygulamayı üçüncü taraflara kiralamak, ödünç vermek veya alt lisanslamak</li>
+      <li>Herhangi bir mülkiyet bildirimini veya etiketi kaldırmak ya da değiştirmek</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>03 · HİZMET TANIMI</h2>
+    <p>Nexus Clean Master aşağıdaki özellikleri sunar:</p>
+    <ul>
+      <li>Gereksiz dosyaların (APK, log, geçici dosyalar) taranması ve silinmesi</li>
+      <li>Dosya kategorisine göre depolama kullanımı analizi</li>
+      <li>Dosya boyutunu azaltmak için fotoğraf sıkıştırma</li>
+      <li>Batarya durumu ve sağlık izleme</li>
+      <li>Çalışan süreçler ve RAM kullanımı görüntüleme</li>
+    </ul>
+    <p>
+      Tüm işlemler cihazınızda yerel olarak gerçekleştirilir. Uygulama hiçbir sunucuya
+      dosya yüklemez.
+    </p>
+  </section>
+
+  <section>
+    <h2>04 · KULLANICI SORUMLULUKLARI</h2>
+    <p>Yalnızca siz sorumlusunuz:</p>
+    <ul>
+      <li>Silmeden önce dosyaları inceleme; silinen dosyalar kurtarılamayabilir</li>
+      <li>Temizleme özelliklerini kullanmadan önce önemli verilerin yedeğini alma</li>
+      <li>Uygulamanın çalışması için gerekli izinleri verme</li>
+      <li>Uygulamayı yalnızca sahip olduğunuz veya yönetme yetkisine sahip olduğunuz cihazlarda kullanma</li>
+    </ul>
+    <div class="warning">
+      ⚠ <strong>Önemli:</strong> Dosya silme işlemi kalıcıdır. Silme işlemini onaylamadan
+      önce seçiminizi mutlaka doğrulayın.
+    </div>
+  </section>
+
+  <section>
+    <h2>05 · YASAK KULLANIMLAR</h2>
+    <p>Uygulamayı aşağıdaki amaçlarla kullanmamayı kabul ediyorsunuz:</p>
+    <ul>
+      <li>Cihaz işlevselliğini bozabilecek sistem-kritik dosyaları silmek</li>
+      <li>Herhangi bir cihazdaki güvenlik veya erişim denetimlerini aşmak</li>
+      <li>Geçerli yerel, ulusal veya uluslararası yasaları ihlal etmek</li>
+      <li>Uygulamanın veya hizmetlerinin bütünlüğüne müdahale etmek</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>06 · ÜÇÜNCÜ TARAF HİZMETLER</h2>
+    <p>
+      Uygulama, Firebase (Google LLC) ve Google AdMob dahil üçüncü taraf hizmetleri
+      entegre etmektedir. Bu hizmetleri kullanmanız, söz konusu hizmetlerin kendi şartlarına
+      ve gizlilik politikalarına tabidir. Bu üçüncü tarafların uygulamalarından sorumlu
+      değiliz.
+    </p>
+  </section>
+
+  <section>
+    <h2>07 · GARANTİ REDDİ</h2>
+    <p>
+      Uygulama, açık veya zımni herhangi bir garanti olmaksızın
+      <strong style="color:#F1F5F9">"olduğu gibi"</strong> ve
+      <strong style="color:#F1F5F9">"mevcut haliyle"</strong> sunulmaktadır.
+      Satılabilirlik, belirli bir amaca uygunluk veya ihlal etmeme konusunda herhangi bir
+      zımni garanti dahil olmak üzere hiçbir garanti verilmemektedir.
+    </p>
+    <p>
+      Uygulamanın hatasız, kesintisiz veya virüs ve diğer zararlı bileşenlerden arınmış
+      olacağını garanti etmiyoruz.
+    </p>
+  </section>
+
+  <section>
+    <h2>08 · SORUMLULUK SINIRLAMASI</h2>
+    <p>
+      Yürürlükteki yasaların izin verdiği azami ölçüde, Buğra Alkın; dosya silme işlemleri
+      sonucunda oluşan veri kaybı dahil ancak bununla sınırlı olmaksızın uygulamayı
+      kullanımınızdan doğan herhangi bir dolaylı, arızi, özel, sonuçsal veya cezai zarardan
+      sorumlu tutulamaz.
+    </p>
+  </section>
+
+  <section>
+    <h2>09 · ŞART DEĞİŞİKLİKLERİ</h2>
+    <p>
+      Bu Şartları istediğimiz zaman değiştirme hakkını saklı tutarız. Güncellenmiş Şartlar
+      bu URL'de yayımlanacaktır. Değişikliklerden sonra uygulamayı kullanmaya devam
+      etmeniz, yeni Şartları kabul ettiğiniz anlamına gelir.
+    </p>
+  </section>
+
+  <section>
+    <h2>10 · UYGULANACAK HUKUK</h2>
+    <p>
+      Bu Şartlar, kanunlar ihtilafı ilkeleri dikkate alınmaksızın Türkiye Cumhuriyeti
+      kanunlarına tabidir.
+    </p>
+  </section>
+
+  <section>
+    <h2>11 · İLETİŞİM</h2>
+    <div class="card">
+      <p><strong>Geliştirici:</strong> Buğra Alkın</p>
+      <p><strong>E-posta:</strong> <a href="mailto:alknbugra@gmail.com">alknbugra@gmail.com</a></p>
+      <p><strong>Uygulama:</strong> Nexus Clean Master</p>
+    </div>
+  </section>
+
+</div><!-- /tr -->
+
+</main>
+
+<footer>
+  <p>© 2025 <span>Nexus Clean Master</span> · Buğra Alkın</p>
+</footer>
+
+<script>
+  function setLang(lang) {
+    document.querySelectorAll('[data-lang]').forEach(el => {
+      el.classList.toggle('visible', el.dataset.lang === lang);
+    });
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    document.getElementById('btn-tr').classList.toggle('active', lang === 'tr');
+    document.getElementById('updated-label').textContent =
+      lang === 'tr' ? 'Son güncelleme: Haziran 2025' : 'Last updated: June 2025';
+  }
+
+  const browserLang = navigator.language?.startsWith('tr') ? 'tr' : 'en';
+  if (browserLang === 'tr') setLang('tr');
+</script>
+
+</body>
+</html>
