@@ -27,7 +27,6 @@
       min-height: 100vh;
     }
 
-    /* ── lang toggle ── */
     #lang-bar {
       position: sticky;
       top: 0;
@@ -58,7 +57,6 @@
       color: var(--cyan);
     }
 
-    /* ── hero ── */
     header {
       text-align: center;
       padding: 4rem 1.5rem 2.5rem;
@@ -96,7 +94,6 @@
       margin-top: .8rem;
     }
 
-    /* ── content ── */
     main {
       max-width: 780px;
       margin: 0 auto;
@@ -148,11 +145,9 @@
     a { color: var(--cyan); text-decoration: none; }
     a:hover { text-decoration: underline; }
 
-    /* ── lang sections ── */
     [data-lang] { display: none; }
     [data-lang].visible { display: block; }
 
-    /* ── footer ── */
     footer {
       text-align: center;
       padding: 2rem 1rem 3rem;
@@ -174,7 +169,7 @@
   <div class="badge">NEXUS CLEAN MASTER</div>
   <h1>PRIVACY POLICY</h1>
   <p class="subtitle">DATA PROTECTION & SECURITY</p>
-  <p class="updated" id="updated-label">Last updated: June 2025</p>
+  <p class="updated" id="updated-label">Last updated: June 2026</p>
 </header>
 
 <main>
@@ -213,7 +208,7 @@
       <ul>
         <li>Crash reports (device model, OS version, stack trace) — via Firebase Crashlytics</li>
         <li>Anonymous usage events (e.g. scan started, clean completed) — via Firebase Analytics</li>
-        <li>Advertising ID — used for personalised ads via Google AdMob</li>
+        <li>Advertising ID — used for personalised ads via Google AdMob (free users only)</li>
         <li>Firebase Cloud Messaging token — for push notifications</li>
       </ul>
     </div>
@@ -235,22 +230,49 @@
     <ul>
       <li><a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Analytics & Crashlytics</a> — Google LLC</li>
       <li><a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Cloud Messaging</a> — Google LLC</li>
-      <li><a href="https://policies.google.com/privacy" target="_blank">Google AdMob</a> — Google LLC</li>
+      <li><a href="https://policies.google.com/privacy" target="_blank">Google AdMob</a> — Google LLC (free users only)</li>
+      <li><a href="https://play.google.com/about/play-terms/index.html" target="_blank">Google Play Billing</a> — Google LLC (Pro subscription)</li>
     </ul>
     <p>These services may collect device identifiers and usage statistics as described in their respective policies.</p>
   </section>
 
   <section>
-    <h2>05 · DATA STORAGE & SECURITY</h2>
+    <h2>05 · PRO SUBSCRIPTION & BILLING</h2>
     <p>
-      Scan results, selected files, and preferences are stored locally on your device using
-      Android SharedPreferences. No data is stored on our servers. Crash logs are transmitted
-      securely to Firebase Crashlytics and retained for 90 days.
+      Nexus Clean Master offers an optional Pro subscription (monthly or yearly) that removes
+      ads and unlocks premium features. All payments are processed exclusively by
+      <strong style="color:#F1F5F9">Google Play Billing</strong>. We do not collect, store, or
+      have access to your payment card details or billing information.
+    </p>
+    <div class="card">
+      <strong>What we receive from Google Play</strong>
+      <ul>
+        <li>A non-personal purchase token to verify your subscription status</li>
+        <li>The subscription type (monthly or yearly) and its expiry date</li>
+      </ul>
+    </div>
+    <p style="margin-top:1rem">
+      Subscriptions automatically renew unless cancelled at least 24 hours before the end of
+      the current billing period. You can manage or cancel your subscription at any time via
+      <strong style="color:#F1F5F9">Google Play → Subscriptions</strong>.
+    </p>
+    <p>
+      For refund requests, please contact Google Play support directly, as all billing is
+      handled by Google.
     </p>
   </section>
 
   <section>
-    <h2>06 · CHILDREN'S PRIVACY</h2>
+    <h2>06 · DATA STORAGE & SECURITY</h2>
+    <p>
+      Scan results, selected files, and preferences are stored locally on your device using
+      Android SharedPreferences. No personal data is stored on our servers. Crash logs are
+      transmitted securely to Firebase Crashlytics and retained for 90 days.
+    </p>
+  </section>
+
+  <section>
+    <h2>07 · CHILDREN'S PRIVACY</h2>
     <p>
       Nexus Clean Master is not directed to children under the age of 13. We do not knowingly
       collect personal information from children. If you believe a child has provided information
@@ -259,18 +281,19 @@
   </section>
 
   <section>
-    <h2>07 · YOUR RIGHTS</h2>
+    <h2>08 · YOUR RIGHTS</h2>
     <p>You have the right to:</p>
     <ul>
       <li>Revoke app permissions at any time via Android Settings</li>
       <li>Opt out of personalised ads via Google's ad settings</li>
+      <li>Cancel your Pro subscription at any time via Google Play</li>
       <li>Request deletion of any crash data by contacting us</li>
       <li>Uninstall the app, which removes all locally stored data</li>
     </ul>
   </section>
 
   <section>
-    <h2>08 · CHANGES TO THIS POLICY</h2>
+    <h2>09 · CHANGES TO THIS POLICY</h2>
     <p>
       We may update this Privacy Policy periodically. Significant changes will be communicated
       via an in-app notice. Continued use of the app after changes constitutes acceptance of
@@ -279,7 +302,7 @@
   </section>
 
   <section>
-    <h2>09 · CONTACT</h2>
+    <h2>10 · CONTACT</h2>
     <div class="card">
       <p><strong>Developer:</strong> Buğra Alkın</p>
       <p><strong>Email:</strong> <a href="mailto:alknbugra@gmail.com">alknbugra@gmail.com</a></p>
@@ -323,7 +346,7 @@
       <ul>
         <li>Kilitlenme raporları (cihaz modeli, işletim sistemi, yığın izi) — Firebase Crashlytics</li>
         <li>Anonim kullanım olayları (tarama başlatıldı, temizlik tamamlandı) — Firebase Analytics</li>
-        <li>Reklam Kimliği — Google AdMob aracılığıyla kişiselleştirilmiş reklamlar için</li>
+        <li>Reklam Kimliği — Google AdMob aracılığıyla kişiselleştirilmiş reklamlar için (yalnızca ücretsiz kullanıcılar)</li>
         <li>Firebase Cloud Messaging token'ı — anlık bildirimler için</li>
       </ul>
     </div>
@@ -345,23 +368,52 @@
     <ul>
       <li><a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Analytics ve Crashlytics</a> — Google LLC</li>
       <li><a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Cloud Messaging</a> — Google LLC</li>
-      <li><a href="https://policies.google.com/privacy" target="_blank">Google AdMob</a> — Google LLC</li>
+      <li><a href="https://policies.google.com/privacy" target="_blank">Google AdMob</a> — Google LLC (yalnızca ücretsiz kullanıcılar)</li>
+      <li><a href="https://play.google.com/about/play-terms/index.html" target="_blank">Google Play Faturalandırma</a> — Google LLC (Pro abonelik)</li>
     </ul>
     <p>Bu hizmetler, ilgili politikalarında açıklandığı şekilde cihaz tanımlayıcılarını ve kullanım istatistiklerini toplayabilir.</p>
   </section>
 
   <section>
-    <h2>05 · VERİ SAKLAMA VE GÜVENLİK</h2>
+    <h2>05 · PRO ABONELİK VE FATURALANDIRMA</h2>
     <p>
-      Tarama sonuçları, seçilen dosyalar ve tercihler yalnızca cihazınızda Android
-      SharedPreferences kullanılarak yerel olarak saklanır. Sunucularımızda herhangi bir
-      veri depolanmaz. Kilitlenme günlükleri Firebase Crashlytics'e güvenli biçimde
-      iletilir ve 90 gün boyunca saklanır.
+      Nexus Clean Master, reklamları kaldıran ve premium özelliklerin kilidini açan isteğe bağlı
+      bir Pro abonelik sunar (aylık veya yıllık). Tüm ödemeler yalnızca
+      <strong style="color:#F1F5F9">Google Play Faturalandırma</strong> tarafından işlenir.
+      Ödeme kartı bilgilerinize veya fatura bilgilerinize erişimimiz yoktur; bu verileri
+      toplamaz veya saklamayız.
+    </p>
+    <div class="card">
+      <strong>Google Play'den aldığımız bilgiler</strong>
+      <ul>
+        <li>Abonelik durumunuzu doğrulamak için kişisel olmayan bir satın alma token'ı</li>
+        <li>Abonelik türü (aylık veya yıllık) ve bitiş tarihi</li>
+      </ul>
+    </div>
+    <p style="margin-top:1rem">
+      Abonelikler, mevcut fatura döneminin bitiminden en az 24 saat önce iptal edilmediği
+      sürece otomatik olarak yenilenir. Aboneliğinizi istediğiniz zaman
+      <strong style="color:#F1F5F9">Google Play → Abonelikler</strong> üzerinden yönetebilir
+      veya iptal edebilirsiniz.
+    </p>
+    <p>
+      İade talepleri için lütfen doğrudan Google Play desteğiyle iletişime geçin; tüm
+      faturalandırma Google tarafından yönetilmektedir.
     </p>
   </section>
 
   <section>
-    <h2>06 · ÇOCUKLARIN GİZLİLİĞİ</h2>
+    <h2>06 · VERİ SAKLAMA VE GÜVENLİK</h2>
+    <p>
+      Tarama sonuçları, seçilen dosyalar ve tercihler yalnızca cihazınızda Android
+      SharedPreferences kullanılarak yerel olarak saklanır. Sunucularımızda kişisel veri
+      depolanmaz. Kilitlenme günlükleri Firebase Crashlytics'e güvenli biçimde iletilir
+      ve 90 gün boyunca saklanır.
+    </p>
+  </section>
+
+  <section>
+    <h2>07 · ÇOCUKLARIN GİZLİLİĞİ</h2>
     <p>
       Nexus Clean Master, 13 yaşın altındaki çocuklara yönelik değildir. Çocuklardan bilerek
       kişisel bilgi toplamayız. Bir çocuğun uygulamamız aracılığıyla bilgi sağladığına
@@ -370,18 +422,19 @@
   </section>
 
   <section>
-    <h2>07 · HAKLARINIZ</h2>
+    <h2>08 · HAKLARINIZ</h2>
     <p>Şu haklara sahipsiniz:</p>
     <ul>
       <li>Android Ayarları üzerinden istediğiniz zaman uygulama izinlerini iptal etme</li>
       <li>Google'ın reklam ayarları üzerinden kişiselleştirilmiş reklamları kapatma</li>
+      <li>Google Play üzerinden istediğiniz zaman Pro aboneliğinizi iptal etme</li>
       <li>Bizimle iletişime geçerek kilitlenme verilerinin silinmesini talep etme</li>
       <li>Uygulamayı kaldırma (tüm yerel veriler silinir)</li>
     </ul>
   </section>
 
   <section>
-    <h2>08 · POLİTİKA DEĞİŞİKLİKLERİ</h2>
+    <h2>09 · POLİTİKA DEĞİŞİKLİKLERİ</h2>
     <p>
       Bu Gizlilik Politikasını zaman zaman güncelleyebiliriz. Önemli değişiklikler uygulama
       içi bildirimle duyurulacaktır. Değişikliklerden sonra uygulamayı kullanmaya devam
@@ -390,7 +443,7 @@
   </section>
 
   <section>
-    <h2>09 · İLETİŞİM</h2>
+    <h2>10 · İLETİŞİM</h2>
     <div class="card">
       <p><strong>Geliştirici:</strong> Buğra Alkın</p>
       <p><strong>E-posta:</strong> <a href="mailto:alknbugra@gmail.com">alknbugra@gmail.com</a></p>
@@ -403,7 +456,7 @@
 </main>
 
 <footer>
-  <p>© 2025 <span>Nexus Clean Master</span> · Buğra Alkın</p>
+  <p>© 2026 <span>Nexus Clean Master</span> · Buğra Alkın</p>
 </footer>
 
 <script>
@@ -414,10 +467,9 @@
     document.getElementById('btn-en').classList.toggle('active', lang === 'en');
     document.getElementById('btn-tr').classList.toggle('active', lang === 'tr');
     document.getElementById('updated-label').textContent =
-      lang === 'tr' ? 'Son güncelleme: Haziran 2025' : 'Last updated: June 2025';
+      lang === 'tr' ? 'Son güncelleme: Haziran 2026' : 'Last updated: June 2026';
   }
 
-  // Auto-detect browser language
   const browserLang = navigator.language?.startsWith('tr') ? 'tr' : 'en';
   if (browserLang === 'tr') setLang('tr');
 </script>
